@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Modify Trainer Schedule</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="/css/styles.css">
+</head>
+<body>
+
+<h1>Modify Trainer's Schedule</h1>
+<form class="container" action="/adminModifyTrainer" method="POST">
+
+    <div class="form-group">
+        <label for="username">Username:</label>
+        <input type="text" class="form-control" id="username" name="userName" required>
+    </div>
+
+    <div class="form-group">
+        <label for = "sunday"> Sunday: </label>
+        <input type="text" class="form-control" id="sunday" name="sunday" required>
+    </div>
+
+    <div class="form-group">
+        <label for = "monday">Monday: </label>
+        <input type="text" class="form-control"  id="monday" name ="monday" required>
+    </div>
+
+    <div class="form-group">
+        <label for = "tuesday">Tuesday: </label>
+        <input type="text" class="form-control" id="tuesday" name="tuesday" required>
+    </div>
+
+    <div class="form-group">
+        <label for="wednesday">Wednesday: </label>
+        <input type="text" class="form-control" id="wednesday" name="wednesday" required>
+    </div>
+
+    <div class="form-group">
+        <label for="thursday">Thursday: </label>
+        <input type="text" class="form-control" id="thursday" name="thursday" required>
+    </div>
+    <div class="form-group">
+        <label for = "friday">Friday: </label>
+        <input type="text" class="form-control" id="friday" name="friday" required>
+    </div>
+    <div class="form-group">
+        <label for = "saturday">Saturday: </label>
+        <input type="text" class="form-control" id="saturday" name="saturday" required>
+    </div>
+
+    <br>
+
+    <button type="submit" class="btn btn-primary">Modify</button>
+    <br><br>
+    <button type="submit" class="btn btn-primary"><a href="/adminMainPage" class="btn custom-btn" > Cancel </a></button>
+    <button type="submit" class="btn btn-primary"><a href="/logout" class="btn custom-btn" > Log Out</a></button>
+</form>
+</body>
+</html>

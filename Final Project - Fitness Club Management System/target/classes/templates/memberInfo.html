@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Gym Data</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="/css/styles.css">
+</head>
+<body>
+<h1>Generic Info</h1>
+
+<p>
+    Gym Status: Open <br>
+    Gym Phone: 902-787-6699 <br>
+    Call to book a personal training appointment or spot in the class. <br>
+    To members: We will call or text the day before as a reminder of an upcoming appointment. <br><br>
+    Current Generic Gym Schedule: <br>
+    Monday: Cycling at from 7pm to 8pm <br>
+    Tuesday: Weightlifting 6pm - 7pm <br>
+    Wednesday: Boxing from 6pm to 8pm <br>
+    Thursday: Martial Arts from 4pm to 5pm <br>
+    Friday: Cycling from 6pm to 7pm <br>
+    Saturday: Dance from 11am to 12pm and 1pm to 2pm <br>
+    Sunday: Dance from 11am to 12pm and 1pm to 2pm <br><br>
+</p>
+<form action = "/memberInfo" method="POST" class="p-4 rounded form-container">
+<div th:each = "var : ${attendance}">
+    <a class="list-group-item list-group-item-action">
+        Schedule ID: <span th:text="${var.id}"></span> <br>
+        User: <span th:text="${var.getUser.username}"></span> <br>
+        Name: <span th:text="${var.getUser.getName()}"></span> <br>
+        Sunday Sessions Attended: <span th:text="${var.sundayCount}"></span> <br>
+        Monday Sessions Attended: <span th:text="${var.mondayCount}"></span> <br>
+        Tuesday Sessions Attended: <span th:text="${var.tuesdayCount}"></span> <br>
+        Wednesday Sessions Attended: <span th:text="${var.wednesdayCount}"></span> <br>
+        Thursday Sessions Attended: <span th:text="${var.thursdayCount}"></span> <br>
+        Friday Sessions Attended: <span th:text="${var.fridayCount}"></span> <br>
+        Saturday Sessions Attended: <span th:text="${var.saturdayCount}"></span> <br><br>
+</div>
+</form>
+<button type="submit" class="btn btn-primary"><a href="/logout" class="btn custom-btn" > Log Out</a></button>
+
+</body>
+</html>
